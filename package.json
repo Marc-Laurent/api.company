@@ -1,0 +1,71 @@
+{
+    "name": "api.company",
+    "version": "0.1.0",
+    "description": "get company phone number",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Marc-Laurent/api.company.git"
+    },
+    "scripts": {
+        "start": "nodemon --exec babel-node api/app.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-nock": "^1.2.0",
+        "express": "^4.17.1",
+        "helmet": "^3.21.1",
+        "morgan": "^1.9.1",
+        "nock": "^11.4.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/node": "^7.6.3",
+        "@babel/polyfill": "^7.6.0",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/register": "^7.6.2",
+        "babel-eslint": "^10.0.3",
+        "babel-preset-env": "^1.7.0",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "eslint": "^6.3.0",
+        "eslint-config-standard": "^14.1.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "mocha": "^6.2.2",
+        "nodemon": "^1.19.4"
+    },
+    "eslintConfig": {
+        "root": true,
+        "ecmaFeatures": {
+            "modules": true,
+            "spread": true,
+            "experimentalObjectRestSpread": true,
+            "restParams": true
+        },
+        "env": {
+            "node": true,
+            "es6": true,
+            "mocha": true
+        },
+        "parser": "babel-eslint",
+        "parserOptions": {
+            "allowImportExportEverywhere": true,
+            "sourceType": "module",
+            "ecmaVersion": 2019
+        },
+        "extends": [
+            "eslint:recommended"
+        ],
+        "plugins": [
+            "mocha"
+        ],
+        "rules": {
+            "mocha/no-exclusive-tests": "error",
+            "mocha/no-pending-tests": "error"
+        }
+    }
+}
