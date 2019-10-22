@@ -3,6 +3,7 @@ import morgan from 'morgan'
 import { json, urlencoded, text } from 'body-parser'
 import helmet from 'helmet'
 import config from './config/config'
+import router from './routes/company.routes'
 
 let app = express()
 let env = process.argv[2] || 'local'
@@ -39,6 +40,11 @@ app.disable('x-powered-by')
  * Protection
  */
 app.use(helmet())
+
+/**
+ * ROUTES Init
+*/
+app.use('/api', router)
 
 app.listen(port)
 console.log('port ... ' + port)
