@@ -8,9 +8,11 @@
         "url": "https://github.com/Marc-Laurent/api.company.git"
     },
     "scripts": {
-        "start": "nodemon --exec babel-node api/app.js"
+        "start": "nodemon --exec babel-node api/app.js",
+        "test": "mocha ./api/test --timeout 10000  --require @babel/register --require @babel/polyfill"
     },
     "dependencies": {
+        "@google/maps": "^1.0.2",
         "body-parser": "^1.19.0",
         "chai-as-promised": "^7.1.1",
         "chai-nock": "^1.2.0",
